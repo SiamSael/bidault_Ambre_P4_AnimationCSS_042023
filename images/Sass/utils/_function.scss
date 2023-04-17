@@ -1,0 +1,3 @@
+@function lightness ($colour) {
+        @return lighten($colour, 30%);
+}
