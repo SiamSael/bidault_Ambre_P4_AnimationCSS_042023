@@ -23,12 +23,10 @@
 }
 */
 @mixin btn {
-    padding: $grid-gutter;
-    @include border;
     color: $colour-white;
     background: $colour-background-btn;
     cursor: pointer;
     &:hover{
-        background: lightness($colour-background-btn);
+        background: $colour-secondary;
     }
 }
