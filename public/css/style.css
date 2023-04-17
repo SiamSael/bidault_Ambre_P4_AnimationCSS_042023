@@ -22,9 +22,12 @@
         }
 }
 */
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -34,20 +37,22 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7;
 }
 
 h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 900;
+  font-size: 5rem;
   font-style: italic;
 }
 
-h2 {
+textarea {
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 24px;
-  text-align: center;
+  font-weight: 100;
+  font-size: 2rem;
 }
 
 button {
@@ -76,6 +81,7 @@ button {
   display: flex;
   flex-direction: column;
   padding-top: 16px;
+  padding-bottom: 16px;
   gap: 10px;
 }
 
@@ -86,7 +92,6 @@ button {
   height: 48px;
   width: 160px;
   margin-bottom: 24px;
-  line-height: 48px;
 }
 
 .working {
@@ -95,10 +100,10 @@ button {
   row-gap: 24px;
 }
 .working__h2 {
-  grid-column: 1/2;
+  grid-column: 1fr;
 }
 .working__button {
-  grid-column: 1/2;
+  grid-column: 1fr;
   height: 72px;
   width: 320px;
   border-radius: 20px;
@@ -124,4 +129,6 @@ button {
 
 .location .fa-solid {
   color: #353535;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

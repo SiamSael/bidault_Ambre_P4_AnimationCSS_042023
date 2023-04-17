@@ -24,9 +24,17 @@
 */
 @mixin btn {
     color: $colour-white;
+    text-align: center;
     background: $colour-background-btn;
+    height: 48px;
+    width: 216px;
+    border: none;
     cursor: pointer;
     &:hover{
         background: $colour-secondary;
     }
+}
+
+@mixin btn-border {
+    border-radius: 25px;
 }

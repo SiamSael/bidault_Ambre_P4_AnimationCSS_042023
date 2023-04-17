@@ -1,21 +1,19 @@
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    font-weight: 100;
-    line-height: 1.7;
 }
 
 h1 {
     font-family: 'Shrikhand', sans-serif;
     font-weight: 900;
-    font-size: 5rem;
     font-style: italic;
 }
 
-textarea {
+h2 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 2rem;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
 }
 
 button {
