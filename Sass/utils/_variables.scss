@@ -3,5 +3,33 @@ $colour-whrite-new: #008766;
 $colour-secondary: #9356DC;
 $colour-background-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $colour-white: #fff;
+$colour-background-tertiary :  #F7F7F7;
 $colour-background-secondary : #EAEAEA;
 $colour-tertiary: #353535;
+$colour-quaternary: #7E7E7E;
+
+$shadows:(
+    btn : (
+        0px 4px 10px rgba(0, 0, 0, 0.25)
+    ), 
+    btn-dark : (
+        0px 4px 10px rgba(0, 0, 0, 0.35)
+    ), 
+    btn-working : (
+        0px 4px 15px rgba(0, 0, 0, 0.15)
+    )
+)
+
+/*
+$border-radius: (
+    btn: (
+
+    ); 
+    box: (
+
+    );
+    card: (
+        
+    )
+)
+*/

@@ -1,20 +1,55 @@
 .working {
+    background-color: $colour-white;
+    margin-top: 56px;
+    margin-bottom: 72px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 24px;
     &__h2 {
+        margin-left: 24px;
         grid-column: 1 / 2;
     }
     &__button {
         grid-column: 1 / 2;
+        display: inline-flex;
+        align-items: center;
+        margin-left: 32px;
         height: 72px; 
         width: 320px;
         border-radius: 20px;
         border: none;
-        background-color: $colour-white;
+        background: $colour-background-tertiary;
+        @include btn-working;
     }
+}
+
+.working span {
+    align-self: center;
 }
 
 .working i {
     margin-right: 24px;
+}
+
+.working .fa-solid {
+    color: $colour-quaternary;
+}
+
+.working .fa-store {
+    color: $colour-secondary;
+}
+
+.working__button > .rounded {
+    transform: translateX(-.7rem) translateY(.2rem);
+    height: 24px;
+    width: 24px;
+    font-size: 14px;
+    color: $colour-white;
+    background-color: $colour-secondary;
+    border-radius: 50px;
+    margin-right: 8px;
+}
+
+.rounded > p {
+    transform: translateY(.2rem);
 }

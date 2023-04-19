@@ -1,0 +1,29 @@
+footer {
+    background-color: $colour-tertiary;
+}
+
+.footer {
+    display :flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 24px;
+    padding-bottom: 16px;
+    &__title {
+        color: $colour-white;
+        line-height: 26px;
+        margin-top: 24px;
+        margin-bottom: 16px;
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 16px;
+    }
+    & a {
+        color: $colour-white;
+        margin-bottom: 8px;
+        text-decoration: none;
+    } 
+    & i {
+        width: 18px;
+        text-align: center;
+        margin-right: 8px;
+    } 
+}

@@ -1,4 +1,5 @@
 .btn {
     @include btn;
     @include btn-border;
+    @include btn-shadow;
 }
