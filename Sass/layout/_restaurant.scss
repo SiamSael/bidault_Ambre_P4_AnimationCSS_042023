@@ -53,6 +53,14 @@
                 font-weight: 300;
                 padding-bottom: 4px;
                 padding-left: 16px;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    width: 40px;
+                    content: "";
+                    border-bottom: 3px solid $colour-background-new;
+                    transform: translateY(24px);
+                }
             }
             & .card {
                 margin-left: 16px;
