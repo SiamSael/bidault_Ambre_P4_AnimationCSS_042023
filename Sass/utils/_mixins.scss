@@ -38,8 +38,12 @@
     box-shadow: map-get($shadows, btn);
 }
 
-@mixin btn-working {
-    box-shadow: map-get($shadows, btn-working);
+@mixin box-working {
+    box-shadow: map-get($shadows, box-working);
+}
+
+@mixin card-menu {
+    box-shadow: map-get($shadows, card-menu);
 }
 
 @mixin a {

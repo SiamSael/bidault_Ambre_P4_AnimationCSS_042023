@@ -11,7 +11,7 @@
         margin-left: 192px;
         margin-right: 192px;
     }
-    &__h2 {
+    &__title {
         padding-left: 16px;
         @media (min-width: $min-width) {
             padding-left: 0px;
@@ -41,7 +41,7 @@
             border-radius: 20px;
             border: none;
             background: $colour-background-tertiary;
-            @include btn-working;
+            @include box-working;
             @media (min-width: $min-width) {
                 width: 304px;
                 margin: 0px;

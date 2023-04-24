@@ -217,6 +217,11 @@ main {
   height: 275px;
 }
 
+.menu {
+  margin: 0px auto;
+  padding: 0px auto;
+  width: 100%;
+}
 .menu__title {
   background-color: #F7F7F7;
   border-top-right-radius: 35px;
@@ -232,6 +237,7 @@ main {
   background-color: #F7F7F7;
   transform: translateY(8px);
   margin-right: 40px;
+  margin-left: 24px;
 }
 .menu__title .icon input:checked ~ .fa, .menu__title .icon .fa:hover {
   font-weight: 900 !important;
@@ -239,6 +245,63 @@ main {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.menu__main {
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.menu__main--categorie {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 16px;
+  padding-bottom: 40px;
+}
+.menu__main--categorie h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 4px;
+  padding-left: 16px;
+}
+.menu__main--categorie .card {
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 72px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.menu__main--categorie .card h3 {
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__main--categorie .card__text {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__main--categorie .card__text .complement {
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__main--categorie .card__text .price {
+  font-weight: 700;
+  color: #353535;
+  padding-left: 16px;
+}
+.menu__main .command {
+  align-self: center;
 }
 
 .working {
@@ -257,11 +320,11 @@ main {
     margin-right: 192px;
   }
 }
-.working__h2 {
+.working__title {
   padding-left: 16px;
 }
 @media (min-width: 800px) {
-  .working__h2 {
+  .working__title {
     padding-left: 0px;
   }
 }
