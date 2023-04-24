@@ -3,3 +3,11 @@
     @include btn-border;
     @include btn-shadow;
 }
+
+.fa {
+    @include heart;
+}
+
+input {
+    display: none;
+}

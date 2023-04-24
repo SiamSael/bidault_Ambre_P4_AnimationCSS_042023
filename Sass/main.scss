@@ -10,8 +10,10 @@
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/main.scss";
+@import "./layout/restaurant.scss";
 
 @import "./pages/working.scss";
 @import "./pages/location.scss";
 @import "./pages/intro.scss";
-@import "./pages/_restaurants-list.scss";
+@import "./pages/restaurants-list.scss";
+@import "./pages/loader.scss";

@@ -1,60 +1,94 @@
 .restaurants {
-    margin-left: 16px;
-    margin-right: 16px;
+    background-color: $colour-background-primary;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 56px;
+    padding-bottom: 64px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: 
         "restaurants__title"
         "cards";
+    @media (min-width: $min-width) {
+        margin: 0 auto;
+        padding: 0 auto;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        padding-left: 192px;
+        padding-right: 192px;
+    }
     &__title {
         margin-left: 4px;
         margin-bottom: 24px;
         grid-column: 1 / 2;
         grid-area: restaurants__title;
-
+        @media (min-width: $min-width) {
+        }
     }
     & .cards {
         grid-column: 1 / 2;
         grid-area: cards;
         display: grid;
+        gap: 16px;
         grid-template-columns: repeat(1, 1fr);
-    }
-    & a {
-        grid-column: 1 / 2;
-        @include a;
-    }
-    & .card {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 248px;
-        border: none;
-        border-radius: 15px;
-        margin-bottom: 16px;
-        & img {
-            box-sizing: border-box;
-            border-top-right-radius: 15px;
-            border-top-left-radius: 15px;
-            object-fit: cover;
-            height: 70%;
+        @media (min-width: $min-width) {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 48px;
+            column-gap: 88px;
+        }
+        & article {
+            grid-column: 1 / 2;
+            height: 248px;
+            @media (min-width: $min-width) {
+                width: 464px;
+            }
+        }
+        & .card {
+            display: flex;
+            flex-direction: column;
             width: 100%;
-            margin-bottom: 16px;
+            border: none;
+            border-radius: 15px;
+            height: 248px;
+            background-color: $colour-background-secondary;
+            @include a;
+            & img {
+                box-sizing: border-box;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                object-fit: cover;
+                height: 68%;
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            & .card-content {
+                margin-left: 8px;
+                line-height: 20px;
+                &__title{
+                    padding-bottom: 8px;
+                }
+            }
         }
-        & h3, p {
-            margin-left: 8px;
-            line-height: 20px;
-            margin-bottom: 8px;
-        }
-        & .fa-solid {
-            float: right;
-            margin-right: 24px;
-            transform: translateY(-.6rem);
-            font-weight: 100;
+    }
+    & .icon {
+        background-color: $colour-background-secondary;
+        border: none;
+        text-align: center;
+        display: inline-flex;
+        float: right;
+        align-items: center;
+        justify-content: center;
+        margin-right: 24px;
+        transform: translateY(-64px);
+        & input:checked ~ .fa,
+        & .fa:hover {
+            @include heartSelected;
         }
     }
 }
-
-.new{
+.new {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,14 +1,32 @@
 @mixin btn {
-    color: $colour-white;
+    color: $colour-primary;
     text-align: center;
     background: $colour-background-btn;
     height: 48px;
     width: 216px;
     border: none;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
     &:hover{
-        background: linear-gradient(193.33deg, lighten(#9356DC, 8%),  lighten(#FF79DA, 8%));
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        border: none;
+        border-radius: 25px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(193.33deg, lighten(#9356DC, 5%),  lighten(#FF79DA, 5%));
         box-shadow: map-get($shadows, btn-dark);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 500ms ease-in-out;
     }
 }
 
@@ -27,4 +45,20 @@
 @mixin a {
     text-decoration: none;
     color: black;
+}
+
+@mixin heart {
+    cursor: pointer;
+    color: $colour-quaternary;
+    font-weight: 100 !important;
+    font-size: 24px;
+    z-index: 1;
+}
+
+@mixin heartSelected {
+    font-weight: 900 !important;
+    display: block;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

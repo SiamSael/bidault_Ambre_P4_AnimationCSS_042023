@@ -4,6 +4,9 @@
 }
 
 body {
+    max-width: 1440px;
     box-sizing: border-box;
-    background: $colour-white;
+    margin: 0 auto;
+    width: 100%;
+    background: $colour-primary;
 }

@@ -1,0 +1,35 @@
+.resto {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 274px;
+    width: 100%;
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        position: absolute;        
+        height: 275px;
+    }
+}
+.menu {
+    &__title {
+        background-color: $colour-background-tertiary;
+        border-top-right-radius: 35px;
+        border-top-left-radius: 35px;
+        padding-left: 16px;
+        padding-top : 32px;
+        transform: translateY(-40px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        & .icon {
+            background-color: $colour-background-tertiary;
+            transform: translateY(8px);
+            margin-right: 40px;
+            & input:checked ~ .fa,
+            & .fa:hover {
+                @include heartSelected;
+            }
+        }
+    }
+}
