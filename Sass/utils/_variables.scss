@@ -11,6 +11,10 @@ $colour-background-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.
 
 $min-width:800px;
 
+$num-dished: 9;
+$anim-dur: 1500ms;
+$anim-delay: calc($anim-dur / $num-dished);
+
 $shadows:(
     btn : (
         0px 4px 10px rgba(0, 0, 0, 0.25)

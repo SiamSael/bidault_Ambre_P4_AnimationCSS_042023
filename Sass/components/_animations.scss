@@ -1,4 +1,3 @@
-//TODO animation-duration: 3s;
 .loading {
     position: fixed;
     top: 0px;
@@ -14,7 +13,9 @@
     display: flex;
     flex-direction: column;
     background-color: $colour-background-primary;
-
+    & p {
+        padding-top: 40px;
+    }
     & * {
         margin: 0px auto;
         margin-top: 20px;
@@ -28,7 +29,6 @@
         top: 35%;
         transform: translate(0%, -50%);
     }
-
     &__circles{
         height: 40px;
         width: 40px;
@@ -75,7 +75,6 @@
         }
     }
 }
-
 @keyframes loading {
     0% {
         opacity: 1; 
@@ -84,5 +83,38 @@
     100% { 
         opacity: 0; 
         z-index: -1;
+    }
+}
+
+.display-dishes {
+    transform-origin: left;
+    animation-name: display-dishes;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    @for $i from 1 through $num-dished {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i + 2000;
+            }
+    }
+}
+@keyframes display-dishes{
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.display-categorie {
+    animation: display-categorie 1700ms 150ms linear both;
+}
+@keyframes display-categorie {
+0% {
+    transform: translateY(-9999px);
+}
+100% {
+    transform: translateY(0);
     }
 }
