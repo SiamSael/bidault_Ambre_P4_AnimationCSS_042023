@@ -13,9 +13,6 @@
     }
     &__title {
         padding-left: 16px;
-        @media (min-width: $min-width) {
-            padding-left: 0px;
-        }
     }
     &__stickers {
         margin-left: 16px;

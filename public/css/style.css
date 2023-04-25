@@ -349,11 +349,6 @@ main {
 .working__title {
   padding-left: 16px;
 }
-@media (min-width: 800px) {
-  .working__title {
-    padding-left: 0px;
-  }
-}
 .working__stickers {
   margin-left: 16px;
   margin-right: 16px;
@@ -486,6 +481,11 @@ main {
   grid-column: 1/2;
   grid-area: restaurants__title;
 }
+@media (min-width: 800px) {
+  .restaurants__title {
+    padding-left: 16px;
+  }
+}
 .restaurants .cards {
   grid-column: 1/2;
   grid-area: cards;
@@ -497,6 +497,7 @@ main {
   .restaurants .cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     row-gap: 48px;
     column-gap: 88px;
   }

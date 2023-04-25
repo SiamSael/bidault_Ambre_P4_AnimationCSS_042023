@@ -24,6 +24,7 @@
         grid-column: 1 / 2;
         grid-area: restaurants__title;
         @media (min-width: $min-width) {
+            padding-left: 16px;
         }
     }
     & .cards {
@@ -35,6 +36,7 @@
         @media (min-width: $min-width) {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             row-gap: 48px;
             column-gap: 88px;
         }
