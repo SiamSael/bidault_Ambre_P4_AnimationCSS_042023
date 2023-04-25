@@ -221,6 +221,12 @@ main {
   margin: 0px auto;
   padding: 0px auto;
   width: 100%;
+  background-color: #F7F7F7;
+}
+@media (min-width: 800px) {
+  .menu {
+    width: 70%;
+  }
 }
 .menu__title {
   background-color: #F7F7F7;
@@ -232,6 +238,11 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media (min-width: 800px) {
+  .menu__title {
+    justify-content: center;
+  }
 }
 .menu__title .icon {
   background-color: #F7F7F7;
@@ -251,6 +262,13 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+@media (min-width: 800px) {
+  .menu__main {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 16px;
+  }
 }
 .menu__main--categorie {
   display: flex;

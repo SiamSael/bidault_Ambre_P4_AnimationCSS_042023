@@ -15,6 +15,10 @@
     margin: 0px auto;
     padding: 0px auto;
     width: 100%;
+    background-color: $colour-background-tertiary;
+    @media (min-width: $min-width) {
+        width: 70%;
+    }
     &__title {
         background-color: $colour-background-tertiary;
         border-top-right-radius: 35px;
@@ -25,6 +29,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @media (min-width: $min-width) {
+            justify-content: center;
+        }
         & .icon {
             background-color: $colour-background-tertiary;
             transform: translateY(8px);
@@ -41,6 +48,11 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        @media (min-width: $min-width) {
+            width: 60%;
+            margin: 0 auto;
+            padding-top: 16px;
+        }
         &--categorie{
             display: flex;
             flex-direction: column;
