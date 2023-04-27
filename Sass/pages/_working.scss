@@ -35,9 +35,9 @@
             margin-right: 32px;
             height: 72px; 
             width: 100%;
-            border-radius: 20px;
+            border-radius: map-get($border-radius, box-working);
             border: none;
-            background: $colour-background-tertiary;
+            background: $colour-background-primary;
             @include box-working;
             @media (min-width: $min-width) {
                 width: 304px;
@@ -50,11 +50,11 @@
                 font-size: 14px;
                 color: $colour-primary;
                 background-color: $colour-secondary;
-                border-radius: 50px;
+                border-radius: map-get($border-radius, circle);
                 & p {
-                    transform: translateY(.3rem);
+                    transform: translateX(.52rem) translateY(.3rem);
                     font-size: 13px;
-                    overflow-wrap: auto;
+                    overflow-wrap: normal;
                 }
             }
             & i {

@@ -13,16 +13,15 @@
 }
 .menu {
     margin: 0px auto;
-    padding: 0px auto;
     width: 100%;
-    background-color: $colour-background-tertiary;
+    background-color: $colour-background-primary;
     @media (min-width: $min-width) {
         width: 70%;
     }
     &__title {
-        background-color: $colour-background-tertiary;
-        border-top-right-radius: 35px;
-        border-top-left-radius: 35px;
+        background-color: $colour-background-primary;
+        border-top-right-radius: map-get($border-radius, container);
+        border-top-left-radius:  map-get($border-radius, container);
         padding-left: 16px;
         padding-top : 32px;
         transform: translateY(-40px);
@@ -33,7 +32,7 @@
             justify-content: center;
         }
         & .icon {
-            background-color: $colour-background-tertiary;
+            background-color: $colour-background-primary;
             transform: translateY(8px);
             margin-right: 40px;
             margin-left: 24px;
@@ -75,36 +74,78 @@
                 }
             }
             & .card {
+                overflow-x: hidden;
+                white-space: nowrap;
                 margin-left: 16px;
                 margin-right: 16px;
                 height: 72px;
-                border-radius: 15px;
+                padding-right: 16px;
+                border-radius: map-get($border-radius, card);
+                position: relative;
+                cursor: pointer;
                 @include card-menu;
-                & h3 {
-                    padding-left: 16px;
-                    padding-top: 8px;
-                    padding-bottom: 8px;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
+                & input:checked ~ .toggle {
+                    transform-origin: right;
+                    animation: translate-price 500ms linear both;
                 }
-                &__text{
+                & .toggle {
+                    position: absolute;
+                    top: 0px;
+                    right: -64px;
+                    height: 100%;
+                    color: $colour-primary;
+                    display: inline-flex;
+                    & .check {
+                        display: flex;
+                        height: 100%;
+                        width: 64px;
+                        background-color: $colour-background-new;
+                        color: $colour-primary;
+                        border-top-right-radius: map-get($border-radius, card);
+                        border-bottom-right-radius: map-get($border-radius, card);
+                        position: relative;
+                        & .fa-solid{
+                            position: absolute;
+                            top: 50%;
+                            left: 30%;
+                        }
+                    }
+                    & .price {
+                        width: 32px;
+                        margin-top: 40px;
+                        margin-right: 16px;
+                        font-weight: 700;
+                        font-size: 15px;
+                        color: $colour-tertiary;
+                    }
+                }
+                & input:checked ~ .card__text {
+                    margin-right: 96px !important;
+                }
+                &__text {
+                    margin-right: 32px;
                     padding-left: 16px;
                     padding-right: 16px;
-                    padding-bottom: 8px;
+                    padding-bottom: 12px;
+                    padding-top: 12px;
+                    row-gap: 8px;
+                    font-style: normal;
                     display: flex;
-                    justify-content: space-between;
-                    & .complement {
+                    flex-direction: column;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    &--title { 
+                        font-weight: 500;
+                        font-size: 18px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    &--complement {
                         font-size: 15px;
                         font-weight: 300;
                         text-overflow: ellipsis;
                         overflow: hidden;
-                        white-space: nowrap;
-                    }
-                    & .price {
-                        font-weight: 700;
-                        color: $colour-tertiary;
-                        padding-left: 16px;
                     }
                 }
             }

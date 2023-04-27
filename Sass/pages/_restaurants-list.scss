@@ -11,7 +11,6 @@
         "cards";
     @media (min-width: $min-width) {
         margin: 0 auto;
-        padding: 0 auto;
         display: flex;
         align-self: center;
         flex-direction: column;
@@ -52,14 +51,15 @@
             flex-direction: column;
             width: 100%;
             border: none;
-            border-radius: 15px;
+            border-radius: map-get($border-radius, card);
             height: 248px;
-            background-color: $colour-background-secondary;
+            background-color: $colour-primary;
+            @include card-menu;
             @include a;
             & img {
                 box-sizing: border-box;
-                border-top-right-radius: 15px;
-                border-top-left-radius: 15px;
+                border-top-right-radius: map-get($border-radius, card);
+                border-top-left-radius: map-get($border-radius, card);
                 object-fit: cover;
                 height: 68%;
                 width: 100%;
@@ -75,7 +75,7 @@
         }
     }
     & .icon {
-        background-color: $colour-background-secondary;
+        background-color: $colour-primary;
         border: none;
         text-align: center;
         display: inline-flex;
@@ -99,7 +99,7 @@
     position: absolute;
     margin-top: 16px;
     margin-right: 16px;
-    border-radius: 2px;
+    border-radius: map-get($border-radius, new);
     z-index: 500;
     background-color: $colour-background-new;
     color: $colour-whrite-new;

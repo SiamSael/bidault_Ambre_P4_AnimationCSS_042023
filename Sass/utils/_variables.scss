@@ -2,18 +2,17 @@ $colour-primary: #fff;
 $colour-secondary: #9356DC;
 $colour-tertiary: #353535;
 $colour-quaternary: #7E7E7E;
-$colour-background-primary: #D2D2D2;
+$colour-background-primary :  #F7F7F7;
 $colour-background-secondary : #EAEAEA;
-$colour-background-tertiary :  #F7F7F7;
 $colour-background-new: #99E2D0;
 $colour-whrite-new: #008766; 
 $colour-background-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 
 $min-width:800px;
 
-$num-dished: 9;
-$anim-dur: 1500ms;
-$anim-delay: calc($anim-dur / $num-dished);
+$num-dishes: 10;
+$anim-dur: 1500;
+$anim-delay: calc($anim-dur / $num-dishes);
 
 $shadows:(
     btn : (
@@ -30,16 +29,24 @@ $shadows:(
     )
 );
 
-/*
+
 $border-radius: (
-    btn: (
-
-    ); 
-    box: (
-
-    );
-    card: (
-        
-    )
-)
-*/
+    new : (
+        2px
+    ),
+    card : (
+        15px
+    ), 
+    box-working : (
+        20px
+    ),
+    btn : (
+        25px
+    ), 
+    container : (
+        35px
+    ), 
+    circle : (
+        50px
+    ),
+);

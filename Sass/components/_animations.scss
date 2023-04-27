@@ -34,7 +34,7 @@
         width: 40px;
         align-items: center;
         vertical-align: middle;
-        border-radius: 50px;
+        border-radius: map-get($border-radius, circle);
         border: 3px solid transparent;
         border-top-color: $colour-secondary;
         animation: spin 800ms linear infinite;
@@ -45,7 +45,7 @@
             left: 12px;
             bottom: 12px;
             right: 12px;
-            border-radius: 50px;
+            border-radius: map-get($border-radius, circle);
             border: 2px solid transparent;
             border-top-color: $colour-secondary;
             border-bottom-color: $colour-secondary;
@@ -59,7 +59,7 @@
             left: 4px;
             bottom: 4px;
             right: 4px;
-            border-radius: 50px;
+            border-radius: map-get($border-radius, circle);
             border: 3px solid transparent;
             border-top-color: $colour-secondary;
             opacity: 0.8;
@@ -92,13 +92,14 @@
     animation-duration: 1000ms;
     animation-fill-mode: both;
     animation-timing-function: linear;
-    @for $i from 1 through $num-dished {
+    @for $i from 1 through $num-dishes {
         &--#{$i} {
-            animation-delay: $anim-delay * $i + 2000;
-            }
+            animation-delay: $anim-delay * $i + 2000ms;
+        }
     }
 }
-@keyframes display-dishes{
+
+@keyframes display-dishes {
     0% {
         transform: scaleX(0);
     }
@@ -110,11 +111,21 @@
 .display-categorie {
     animation: display-categorie 1700ms 150ms linear both;
 }
+
 @keyframes display-categorie {
 0% {
     transform: translateY(-9999px);
 }
 100% {
     transform: translateY(0);
+    }
+}
+
+@keyframes translate-price {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-64px);
     }
 }
