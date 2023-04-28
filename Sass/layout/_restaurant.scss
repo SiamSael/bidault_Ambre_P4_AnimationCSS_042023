@@ -85,8 +85,10 @@
                 cursor: pointer;
                 @include card-menu;
                 & input:checked ~ .toggle {
-                    transform-origin: right;
                     animation: translate-price 500ms linear both;
+                }
+                & input:not(:checked) ~ .toggle {
+                    animation: translate-price-reverse 500ms linear both;
                 }
                 & .toggle {
                     position: absolute;
