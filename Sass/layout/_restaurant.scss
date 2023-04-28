@@ -122,10 +122,10 @@
                     }
                 }
                 & input:checked ~ .card__text {
-                    margin-right: 96px !important;
+                    margin-right: 96px;
                 }
                 &__text {
-                    margin-right: 32px;
+                    margin-right: 64px;
                     padding-left: 16px;
                     padding-right: 16px;
                     padding-bottom: 12px;
